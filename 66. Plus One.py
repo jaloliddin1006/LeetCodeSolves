@@ -12,3 +12,5 @@ class Solution:
 
 a = Solution()
 print(a.plusOne([4,3,2,1]))
+
+#out [4,3,2,2]

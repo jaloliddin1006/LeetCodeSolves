@@ -7,3 +7,5 @@ class Solution:
         return list(set(num_1))
     
 print(Solution().intersection([1,2,3,3], [1,1,2,2]))
+
+# out:[1,2]

@@ -1,5 +1,6 @@
+import collections
 class Solution:
-    def checkValid(self, matrix: List[List[int]]) -> bool:
+    def checkValid(self, matrix: list[list[int]]) -> bool:
         rows = collections.defaultdict(set)
         colls = collections.defaultdict(set)
         for r in range(len(matrix)):

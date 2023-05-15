@@ -22,5 +22,3 @@ class Solution:
 
 a = Solution()
 print(a.getLucky('iiii',1))
-
-#out: 36

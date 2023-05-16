@@ -1,0 +1,1 @@
+select customers.name as Customers from Customers left JOIN Orders ON  Customers.id = Orders.customerId where Customers.id not in (select customerId from orders)

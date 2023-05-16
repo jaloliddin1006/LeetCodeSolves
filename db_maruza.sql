@@ -1,4 +1,10 @@
--- PostgreSQL-da indexlar ma'lumotlar ustida tezkor qidirishni optimallashtirish uchun ishlatiladi. 
+--  Jaloliddin Mamatmusayev Ma'lumotlar Bazasi fanidan 
+-- "SQL da indexlardan foydalanish" mavzusida tayyorlagan
+--                  mustaqil ishi 
+
+
+-- PostgreSQL-da indexlar ma'lumotlar ustida tezkor qidirishni 
+    -- optimallashtirish uchun ishlatiladi. 
 -- Quyidagi misollar indexlar bilan ishlashni to'liq tushuntiradi:
 
 
@@ -33,7 +39,7 @@ CREATE UNIQUE INDEX index_email ON users (email);
 -- Beshlik (B-tree) indeks yaratish:
 CREATE INDEX index_country ON users USING BTREE (country);
 
--- Bu misolda customers jadvalidagi age ustuniga Beshlik (B-tree) indeksi yaratiladi. 
+-- Bu misolda users jadvalidagi country ustuniga Beshlik (B-tree) indeksi yaratiladi. 
 -- Beshlik indeks yo'qotish va katta ma'lumotlar ustida ishlashda yaxshi natijalarni beradi.
 
 
@@ -51,6 +57,8 @@ SELECT * FROM pg_indexes WHERE tablename = 'users';
 
 -- Bu so'rov users jadvalidagi indekslarni ko'rsatadi.
 
--- Indeks yaratish, uni foydalanish va o'chirish bilan PostgreSQL ma'lumotlar qidirish jarayonlarini tezlashtirishga imkon beradi. 
--- Indeksni ma'lumotlar ustida moslashtirishni, so'rovlar birlashmasini optimallashtirishni va iste'molchilarga tezlikni 
--- ta'minlashni o'z ichiga oladi.
+-- Indeks yaratish, uni foydalanish va o'chirish bilan PostgreSQL ma'lumotlar 
+    -- qidirish jarayonlarini tezlashtirishga imkon beradi. 
+
+-- Indeksni ma'lumotlar ustida moslashtirishni, so'rovlar birlashmasini
+    -- optimallashtirishni va iste'molchilarga tezlikni ta'minlashni o'z ichiga oladi.

@@ -4,9 +4,12 @@ class ListNode:
         self.next = next
 class Solution:
     def getDecimalValue(self, head: ListNode) -> int:
-        return head.val
-    
+        s = ''
+        while head:
+            s += str(head.val)
+            head = head.next
 
+        return int(s,2)
 # print(Solution().getDecimalValue([1,0,1]))
 
 

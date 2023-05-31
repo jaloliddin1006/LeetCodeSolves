@@ -16,7 +16,6 @@ class Solution:
                 score.append(score[n-1]+score[n-2])
                 n += 1
                 continue
-        
             score.append(int(i))
             n += 1
         return sum(score)
@@ -25,4 +24,4 @@ class Solution:
 print(Solution().calPoints(["5","-2","4","C","D","9","+","+"]))
 
 
-print("-1".isdigit())
+# print("-1".isdigit())

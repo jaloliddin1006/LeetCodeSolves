@@ -1,0 +1,16 @@
+class Solution:
+    def missingNumber(self, nums: List[int]) -> int:
+        nums.sort()
+        if len(nums) == nums[-1]+1:
+            return len(nums)
+
+        L = 0
+        G = nums[-1]
+        T = (L+G)//2
+        while T in nums:
+            if nums[T] == T:
+                L = T + 1
+            else:
+                G = T
+            T = (L+G)//2
+        return T
